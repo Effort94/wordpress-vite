@@ -17,7 +17,7 @@ export default defineConfig({
         watch: {
             usePolling: true,
             interval: 100,
-            ignored: ['**/node_modules/**']
+            ignored: ['**/node_modules/**'],
         },
         hmr: true,
     },
