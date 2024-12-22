@@ -5,6 +5,7 @@ export default defineConfig({
     build: {
         outDir: '../dist',
         emptyOutDir: true,
+        manifest: true,
         rollupOptions: {
             input: './src/main.js',
             output: {
@@ -16,6 +17,7 @@ export default defineConfig({
         watch: {
             usePolling: true,
             interval: 100,
+            ignored: ['**/node_modules/**']
         },
         hmr: true,
     },
