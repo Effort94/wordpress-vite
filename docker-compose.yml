@@ -1,0 +1,57 @@
+services:
+
+  database:
+    container_name: 'database'
+    image: mariadb:10.6.4-focal
+    ports:
+      - 3306:3306
+    env_file: .env
+    environment:
+      MYSQL_DATABASE: '${MYSQL_DATABASE}'
+      MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
+      MYSQL_ROOT_PASS: '${MYSQL_ROOT_PASSWORD}'
+      MYSQL_USER: '${MYSQL_USER}'
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - wp-network
+
+  phpmyadmin:
+    depends_on:
+      - database
+    container_name: 'phpmyadmin'
+    image: phpmyadmin/phpmyadmin
+    env_file: .env
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+    ports:
+        - "8081:80"
+    networks:
+      - wp-network
+
+  wordpress:
+    depends_on:
+      - database
+    container_name: 'wordpress'
+    image: wordpress:latest
+    ports:
+      - 8080:80
+    env_file: .env
+    environment:
+      WP_ENV: 'local'
+      WORDPRESS_DB_HOST: database:3306
+      WORDPRESS_DB_NAME: '${MYSQL_DATABASE}'
+      WORDPRESS_DB_USER: '${MYSQL_USER}'
+      WORDPRESS_DB_PASSWORD: '${MYSQL_PASSWORD}'
+    volumes:
+      - .:/var/www/html
+    networks:
+      - wp-network
+
+volumes:
+  db-data:
+
+networks:
+  wp-network:
+    driver: bridge
