@@ -2,14 +2,16 @@
     get_header();
 ?>
 
-    <div class="landing-page-container">
-        <div class="landing-page-content">
-            <h1 class="landing-heading">Hello World</h1>
-            <p class="landing-description">This site uses docker, wordpress and vite. Pretty cool right?!</p>
-            <ul>
-                <li>Make changes to the styles and watch magic happen</li>
-                <li>Think you have some bad javascript code?  Try running npx eslint</li>
-            </ul>
+    <div class="container">
+        <div class="section">
+            <h1 class="section__heading">Hello World</h1>
+            <div class="wsection__content">
+                <p class="section__text">This site uses docker, wordpress and vite. Pretty cool right?!</p>
+                <ul class="section__list">
+                    <li class="section__list-item">Make changes to the styles and watch magic happen</li>
+                    <li class="section__list-item">Think you have some bad javascript code?  Try running npx eslint</li>
+                </ul>
+            </div>
         </div>
     </div>
 <?php

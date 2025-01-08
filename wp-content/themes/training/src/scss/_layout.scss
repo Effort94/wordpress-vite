@@ -1,0 +1,34 @@
+// _layouts.scss
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 40px 0;
+
+  &__heading {
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  &__list {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 30px;
+  }
+}

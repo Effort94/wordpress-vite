@@ -39,3 +39,17 @@ add_action('wp_footer', function() {
     }
 }, 100);
 
+
+/**
+ * Register primary navigation menu
+ *
+ * @return void
+ */
+function register_primary_navigation_menu(): void {
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu', 'training'),
+        )
+    );
+}
+add_action('after_setup_theme', 'register_primary_navigation_menu');

@@ -15,3 +15,13 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
+<nav id="site-navigation" class="main-navigation">
+    <?php
+    wp_nav_menu(array(
+        'theme_location' => 'primary', // This matches the location registered in functions.php
+        'menu_class' => 'menu', // Adds a CSS class to the <ul> of the menu
+        'container' => false, // Don't wrap the menu in any container
+    ));
+    ?>
+</nav>

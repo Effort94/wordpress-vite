@@ -7,7 +7,7 @@ export default defineConfig({
         emptyOutDir: true,
         manifest: true,
         rollupOptions: {
-            input: './src/main.js',
+            input: ['./src/main.js', '**/*.css'],
             output: {
                 assetFileNames: 'assets/[name].[hash][extname]',
             },
@@ -20,12 +20,5 @@ export default defineConfig({
             ignored: ['**/node_modules/**'],
         },
         hmr: true,
-    },
-    css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: '@use "./scss/variables.scss" as *;'
-            },
-        },
     },
 });
