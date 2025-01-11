@@ -5,6 +5,7 @@
     <ol>
         <li>
             <ul>
+                <li><a href="#about-the-project">About The Project</a></li>
                 <li><a href="#built-with">Built With</a></li>
             </ul>
         </li>
@@ -22,39 +23,50 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# About The Project
 
 This project was created as an example of how Wordpress sites could be used in Docker.
 
-This project is built with Docker, which containerises all the parts that make a wordpress site. More can be added
-The existing can be changed. A container is whatever you desire it to be.
+This project is built with Docker, which containerises the database, phpmyadmin and wordpress. The project uses
+node v16.0 and Vite to handle all the assets building and compiling.
 
-### Built With
+# Built With
 
  - Wordpress
  - Docker
  - Vite
- - Eslint
 
 <!-- GETTING STARTED -->
-## Getting Started
+# Getting Started
 
-Install docker desktop for windows, make sure Docker is started.
+Install docker desktop for windows, make sure Docker is started. You can have two options, you can either clone the project
+in Windows or in Linux. The recommended way is Linux, as it will drastically improve build and load speeds compared to windows.
 
+When installing docker, it will automatically create the WSL network folder. Once found, do the following steps.
 
-1) Clone the repository and fetch the latest.
-2) In root directory run command ``docker-compose build && docker-compose up``
-3) Make sure you have node version 16 installed. You can do this using Node Version Manager (nvm install 16).
-3) npm install
-4) npm run build
-5) npm run dev
+1) Navigate to /home and create a new directory to store all applications. e.g /applications
+2) In your chosen code editor, open the $wsl/home/applications directory you created.
+3) git clone the repository. **Note: If you have not done so, you will need to create SSH keys and add them to the repository**
+4) cd into the project and run command ``docker-compose build && docker-compose up``
 
-Currently, npm run build automatically minifies css and js files. It also regenerates the css and js files for production
-using the latest css and js changes.
+This will create all the containers required. From here, we will now need to install all the tools required for the containers
+to work.
+
+1) Make sure to have node version 16 installed. You can use [NVM](https://github.com/nvm-sh/nvm) to manage multiple node versions.
+2) ``npm install && npm run dev``
+3) Navigate to your localhost and test it all works.
+
+This will auto compile everything required for the project to run.
+
+<!-- HOW IT WORKS -->
+# How it Works
+
+## Development
+
+When developing, you will use ``npm run dev``.
 
 npm run dev is only used as a HMR system. This means you can change any styling and it will automatically be applied,
 without the need to refresh the page.
 
-Either make sure to npm run build before commiting, or run this command in the bit bucket pipelines.
-
-There are alternative ways to extend this further to cover any other gaps, this is just a bare basic backbone demo.
+## Pre-commit
+Once development is done, and you're ready to commit changes, you will need to run ``npm run build``

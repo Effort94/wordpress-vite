@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> lang="en">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +14,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
-
+<body>
 <nav id="site-navigation" class="main-navigation">
     <?php
     wp_nav_menu(array(
