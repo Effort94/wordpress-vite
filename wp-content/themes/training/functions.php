@@ -17,7 +17,7 @@ add_action('wp_enqueue_scripts', function() {
         // Enqueue the HMR script if in dev mode
         if ($is_dev) {
             // Vite uses the default port 3000 for HMR
-            wp_enqueue_script('vite-hmr', 'http://localhost:3000/@vite/client', [], null, true);
+            wp_enqueue_script('vite-hmr', 'http://localhost:5173/@vite/client', [], null, true);
         }
     }
 
