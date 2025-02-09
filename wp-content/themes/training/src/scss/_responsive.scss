@@ -6,8 +6,26 @@
 /*==========================================*/
 @media (max-width: $mobile) {
   .main-navigation {
+    flex-direction: column;
+    padding: 20px;
+
     .menu {
       flex-direction: column;
+      margin-top: 20px;
+
+      li {
+        margin-right: 0;
+        margin-bottom: 15px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+
+      .site-logo {
+        max-height: 80px;
+        margin-bottom: 20px;
+      }
     }
   }
 }

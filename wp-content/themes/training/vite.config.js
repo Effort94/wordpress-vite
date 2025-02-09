@@ -7,7 +7,7 @@ export default defineConfig({
         emptyOutDir: true,
         manifest: true,
         rollupOptions: {
-            input: ['./src/main.js', '**/*.css'],
+            input: ['./src/main.js', 'style.css'],
             output: {
                 assetFileNames: 'assets/[name].[hash][extname]',
             },
