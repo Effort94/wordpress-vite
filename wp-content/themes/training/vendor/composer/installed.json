@@ -1,0 +1,42 @@
+{
+    "packages": [
+        {
+            "name": "effort94/shared-components",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Effort94/shared-components.git",
+                "reference": "c4330c814660045bef6667d6071e29037be9bfdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Effort94/shared-components/zipball/c4330c814660045bef6667d6071e29037be9bfdb",
+                "reference": "c4330c814660045bef6667d6071e29037be9bfdb",
+                "shasum": ""
+            },
+            "time": "2025-03-17T19:00:07+00:00",
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "component-files": [
+                    "scss/"
+                ]
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/php/helpers.php"
+                ]
+            },
+            "description": "Reusable helper functions, styles, and HTML components",
+            "support": {
+                "source": "https://github.com/Effort94/shared-components/tree/main",
+                "issues": "https://github.com/Effort94/shared-components/issues"
+            },
+            "install-path": "../effort94/shared-components"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

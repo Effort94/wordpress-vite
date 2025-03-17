@@ -1,0 +1,15 @@
+{
+    "name": "effort94/shared-components",
+    "description": "Reusable helper functions, styles, and HTML components",
+    "autoload": {
+        "files": [
+            "src/php/helpers.php"
+        ]
+    },
+    "require": {},
+    "extra": {
+        "component-files": [
+            "scss/"
+        ]
+    }
+}

@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 // Enqueue the theme's JS and CSS files
 add_action('wp_enqueue_scripts', function() {
 

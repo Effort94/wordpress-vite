@@ -1,0 +1,13 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:Effort94/shared-components.git"
+    }
+  ],
+  "require": {
+    "effort94/shared-components": "dev-main@dev"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

@@ -1,0 +1,54 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5594061f2bba4a3d1c86fb346bd48b54",
+    "packages": [
+        {
+            "name": "effort94/shared-components",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Effort94/shared-components.git",
+                "reference": "c4330c814660045bef6667d6071e29037be9bfdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Effort94/shared-components/zipball/c4330c814660045bef6667d6071e29037be9bfdb",
+                "reference": "c4330c814660045bef6667d6071e29037be9bfdb",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "component-files": [
+                    "scss/"
+                ]
+            },
+            "autoload": {
+                "files": [
+                    "src/php/helpers.php"
+                ]
+            },
+            "description": "Reusable helper functions, styles, and HTML components",
+            "support": {
+                "source": "https://github.com/Effort94/shared-components/tree/main",
+                "issues": "https://github.com/Effort94/shared-components/issues"
+            },
+            "time": "2025-03-17T19:00:07+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "effort94/shared-components": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}

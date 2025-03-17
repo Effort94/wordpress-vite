@@ -1,0 +1,46 @@
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &__body {
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    text-align: right;
+  }
+
+  &--shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &--bordered {
+    border: 1px solid #ddd;
+  }
+
+  &--dark {
+    background-color: #333;
+    color: white;
+    .card__header, .card__footer{
+      border-color: #555;
+    }
+  }
+
+  @include mobile {
+    border-radius: 0;
+  }
+}
